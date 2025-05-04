@@ -66,4 +66,13 @@ Coloque as imagens nas pastas imagensCEL/ e imagensPC/.
 
 4. node chatFuria.js
 Escaneie o QR Code com o WhatsApp Web e interaja com o bot a partir do seu número.
+```
+
+---
+
+👤 Autor
+Vinícius – Dev
+💼 Desenvolvedor e entusiasta de bots conversacionais
+📸 Linkedin: https://www.linkedin.com/in/vin%C3%ADcius-domingos-12a50b325/
+
 
