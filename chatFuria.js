@@ -1,35 +1,30 @@
 // leitor de qr code
 const qrcode = require('qrcode-terminal');
-const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js'); // Mudança Buttons
+const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js');
 const client = new Client();
 
 const fs = require('fs');
 const path = require('path');
 
-// serviço de leitura do qr code
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
 });
-// apos isso ele diz que foi tudo certo
 client.on('ready', () => {
     console.log('✅ Tudo certo! WhatsApp conectado.');
 });
-// E inicializa tudo 
 client.initialize();
 
-const delay = ms => new Promise(res => setTimeout(res, ms)); // Função que usamos para criar o delay entre uma ação e outra
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 
 // Funil
-
 client.on('message', async msg => {
 
-    // Menu padrão
     async function enviarSaudacao() {
         const chat = await msg.getChat();
     
-        await chat.sendStateTyping(); // Simulando Digitação
-        await delay(500); //Delay de 3000 milisegundos mais conhecido como 3 segundos
+        await chat.sendStateTyping(); // Digitação Simulada
+        await delay(500); //Delay de 500 milisegundos mais conhecido como 3 segundos
     
         const mensagem = `🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Curiosidades FÚRIA\n📱 4 - Contato\n🙋 5 -  *Fan Art FURIA + Wallpapers Personalizados*`;
     
@@ -40,8 +35,8 @@ client.on('message', async msg => {
     async function tryMensagensForaMenu() {
         const chat = await msg.getChat();
     
-        await delay(1000); //delay de 3 segundos
-        await chat.sendStateTyping(); // Simulando Digitação
+        await delay(1000);
+        await chat.sendStateTyping();
         await delay(1000);
         await client.sendMessage(msg.from, '❌ Desculpe, não entendi... \n\nPor favor, digite um dos números abaixo para continuar: ');
         await delay(1000);
@@ -49,7 +44,6 @@ client.on('message', async msg => {
 
     }
 
-    // ✅ Adição de datas de jogos
     async function adicaoJogo1() {
         const chat = await msg.getChat();
 
@@ -68,7 +62,6 @@ client.on('message', async msg => {
         await client.sendMessage(msg.from, '🔔 Lembrete: *FURIA x Cloud9 (VALORANT Showmatch)* está logo ao lado!\n\n 📅 09/05/2025 09/05');
     }
 
-    // Fim de jogo
     async function endGame() {
         const chat = await msg.getChat();
 
@@ -85,11 +78,11 @@ client.on('message', async msg => {
 
         const chat = await msg.getChat();
 
-        await delay(3000); //delay de 3 segundos
-        await chat.sendStateTyping(); // Simulando Digitação
-        await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
-        const contact = await msg.getContact(); //Pegando o contato
-        const name = contact.pushname; //Pegando o nome do contato
+        await delay(3000); 
+        await chat.sendStateTyping();
+        await delay(3000); 
+        const contact = await msg.getContact();
+        const name = contact.pushname;
 
         const mensagem = 'Olá '+ name.split(" ")[0] +' do time Furioso! 🐾\nSou o assistente virtual da FURIA! Como posso te ajudar hoje?\n\nEscolha uma das opções:\n\n🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Curiosidades FÚRIA\n📱 4 - Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*'
 
@@ -101,8 +94,8 @@ client.on('message', async msg => {
     if (msg.body !== null && msg.body === '1' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
 
-        await delay(1000); //delay de 3 segundos
-        await chat.sendStateTyping(); // Simulando Digitação
+        await delay(1000);
+        await chat.sendStateTyping();
         await delay(1000);
         await client.sendMessage(msg.from, '🔥 *COMO FUNCIONA O BOT DA FÚRIA?*\n\nVocê está conversando com um bot feito especialmente para os fãs da FURIA!\nAqui você pode:\n- Ver os *próximos jogos* do time 🎮\n- Descobrir *curiosidades exclusivas* 🧠\n- Ter acesso direto aos nossos *canais oficiais* 📲\nVer *Wallpapaers Personalizados* da Furia 🎨 \n\nTudo isso de forma simples, rápida e pelo seu WhatsApp!\n\nQuer saber mais sobre a Fúria? Acesse: https://www.furia.gg/');
 
@@ -113,7 +106,7 @@ client.on('message', async msg => {
 
     if(msg.body !== null && msg.body === '2' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
-        await chat.sendStateTyping(); // Simulando Digitação
+        await chat.sendStateTyping();
         await delay(1000);
 
         await client.sendMessage(msg.from, `📅 *PRÓXIMOS JOGOS DA FURIA:*\n
@@ -129,7 +122,7 @@ client.on('message', async msg => {
 
     if(msg.body !== null && msg.body === '3' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
-        await chat.sendStateTyping(); // Simulando Digitação
+        await chat.sendStateTyping();
         await delay(1000);
 
         await client.sendMessage(msg.from, '🐾 *CURIOSIDADE FURIOSA:*\n\nVocê sabia que o nome *FURIA* representa a *intensidade* e o *espírito de luta* dos jogadores?\n\nA organização foi criada em 2017 e já colocou o Brasil no topo do CS:GO mundial! 🌍💣');
@@ -141,7 +134,7 @@ client.on('message', async msg => {
 
     if(msg.body !== null && msg.body === '4' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
-        await chat.sendStateTyping(); // Simulando Digitação
+        await chat.sendStateTyping();
         await delay(1000);
 
         await client.sendMessage(msg.from, '📲 *NOSSOS CANAIS OFICIAIS:*\n\nInstagram: https://instagram.com/furiagg\nTwitter: https://twitter.com/furiagg\nSite oficial: https://www.furia.gg');
@@ -164,7 +157,6 @@ client.on('message', async msg => {
 
     if(msg.body !== null && msg.body === "6" && msg.from.endsWith('@c.us')) {
         // imagens de celular
-
         const imagensJpeg = ["imagensCEL/STORIES4.jpg",
                             "imagensCEL/STORIES5.jpg",
                             "imagensCEL/Furia1.jpg",
@@ -173,7 +165,7 @@ client.on('message', async msg => {
                             "imagensCEL/STORIES3.jpg" ];
 
         for (const imagePath of imagensJpeg) {
-            const extension = path.extname(imagePath).toLowerCase(); // pega a extensão (.png, .jpg, etc.)
+            const extension = path.extname(imagePath).toLowerCase(); // pega extensão
             let mimeType;
 
             if (extension === '.png') {
@@ -189,7 +181,7 @@ client.on('message', async msg => {
             const media = new MessageMedia(mimeType, imageBase64, path.basename(imagePath));
         
             await client.sendMessage(msg.from, media);
-            await delay(4000); // pequena pausa entre os envios (opcional)
+            await delay(4000); // pequena pausa entre os envios das imagens
         }
 
         await delay(3000);
@@ -210,7 +202,7 @@ client.on('message', async msg => {
                             "imagensPC/WIDE5.jpg"];
 
         for (const imagePath of imagensJpeg) {
-            const extension = path.extname(imagePath).toLowerCase(); // pega a extensão (.png, .jpg, etc.)
+            const extension = path.extname(imagePath).toLowerCase();
             let mimeType;
 
             if (extension === '.png') {
@@ -226,7 +218,7 @@ client.on('message', async msg => {
             const media = new MessageMedia(mimeType, imageBase64, path.basename(imagePath));
         
             await client.sendMessage(msg.from, media);
-            await delay(4000); // pequena pausa entre os envios (opcional)
+            await delay(4000);
         }
 
         await delay(3000);
@@ -241,7 +233,6 @@ client.on('message', async msg => {
 
     if((msg.body !== '1' && msg.body !== '2' && msg.body !== '3' && msg.body !== '4' && msg.body !== '5' && msg.body !== '6' && msg.body !== '7' && msg.body !== mensagensEntrada) && msg.from.endsWith('@c.us')) {
         tryMensagensForaMenu();
-        // 
     }
 
     const delayMsg = 130000
