@@ -42,7 +42,7 @@ As imagens usadas como wallpapers foram coletadas de fontes públicas de fãs ou
 
 ## 📹 Demonstração
 
-▶️ Vídeo demonstrativo: [Link para o vídeo no Google Drive ou YouTube]
+▶️ Vídeo demonstrativo: https://drive.google.com/file/d/1pfSfbqz6LYLqoyZrs9L90Cul6apZfpJf/view?usp=drive_link
 
 ---
 
@@ -51,7 +51,7 @@ As imagens usadas como wallpapers foram coletadas de fontes públicas de fãs ou
 ```bash
 1. Clone o repositório:
 
-git clone https://github.com/seu-usuario/chatbot-furia.git
+git clone https://github.com/vinijr01/chatbot-furia.git
 cd chatbot-furia
 
 
@@ -62,10 +62,10 @@ Coloque as imagens nas pastas imagensCEL/ e imagensPC/.
 
 
 3. Inicie o bot:
-
+node chatFuria.js
 
 4. node chatFuria.js
-Escaneie o QR Code com o WhatsApp Web e interaja com o bot a partir do seu número.
+Escaneie o QR Code com o WhatsApp Web e interaja com o bot a partir do seu próprio contato.
 ```
 
 ---
