@@ -3,7 +3,7 @@ const qrcode = require('qrcode-terminal');
 const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js');
 const client = new Client();
 
-const numerosProibidos = require('./dadosPrivados.js')
+const { numerosProibidos } = require('./dadosPrivados.js');
 
 const fs = require('fs');
 const path = require('path');
@@ -23,7 +23,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 client.on('message', async msg => {
 
     if (numerosProibidos().includes(msg.from)) {
-        return; // Sai da função sem fazer nada
+        return; // Ignora a mensagem
       }
 
     async function enviarSaudacao() {
