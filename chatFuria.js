@@ -3,6 +3,8 @@ const qrcode = require('qrcode-terminal');
 const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js');
 const client = new Client();
 
+const numerosProibidos = require('./dadosPrivados.js')
+
 const fs = require('fs');
 const path = require('path');
 
@@ -20,11 +22,15 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 // Funil
 client.on('message', async msg => {
 
+    if (numerosProibidos().includes(msg.from)) {
+        return; // Sai da função sem fazer nada
+      }
+
     async function enviarSaudacao() {
         const chat = await msg.getChat();
     
         await chat.sendStateTyping(); // Digitação Simulada
-        await delay(500); //Delay de 500 milisegundos mais conhecido como 3 segundos
+        await delay(500); //Delay de 500 milisegundos mais conhecido como meio segundo
     
         const mensagem = `🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Curiosidades FÚRIA\n📱 4 - Contato\n🙋 5 -  *Fan Art FURIA + Wallpapers Personalizados*`;
     
@@ -238,7 +244,7 @@ client.on('message', async msg => {
     const delayMsg = 130000
     while(msg.body !== null) {
         await delay(delayMsg);
-        adicaoJogo1()
+        adicaoJogo2()
         break
     }
     
