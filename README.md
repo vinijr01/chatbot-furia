@@ -49,6 +49,12 @@ As imagens usadas como wallpapers foram coletadas de fontes públicas de fãs ou
 ## 📦 Como Executar o Projeto
 
 ```bash
+Método 1 ->
+1. Interaja com o BOT por esse número de whatsapp -> (27) 99867-4771 ou esse (27) 99906-7238
+
+--- 
+
+Método 2 ->
 1. Clone o repositório:
 
 git clone https://github.com/vinijr01/chatbot-furia.git
