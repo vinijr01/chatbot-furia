@@ -117,13 +117,12 @@ client.on('message', async msg => {
 
         await client.sendMessage(msg.from, `📅 *PRÓXIMOS JOGOS DA FURIA:*\n
 🔥 10/05 - FURIA vs The MongolZ (CS2 - ESL Pro League) - *19h30*
-⚽ 19/05 - FURIA vs The MongolZ (CS2- ESL Pro League) - *21h00*
-🎮 09/05 - FURIA x Cloud9 (VALORANT Showmatch) - *18h00*\n\n
+⚽ 19/05 - FURIA vs The MongolZ (CS2- ESL Pro League) - *21h00*\n\n
 ⚠️ *Os horários estão sujeitos a mudanças!* Fica de olho no nosso Insta: @furiagg`);
 
         await client.sendMessage(msg.from, `📺 *ONDE ASSISTIR:*
-🎙️ Transmissão com o Gaules: https://www.twitch.tv/gaules
 📡 Canal oficial da FURIA: https://www.twitch.tv/furiagg
+🎙️ Transmissão com o Gaules: https://www.twitch.tv/gaules
 📷 Acompanhe também no Instagram: https://www.instagram.com/furiagg\n\n
 Boa torcida, Pantera! 🐾💜`);
 
