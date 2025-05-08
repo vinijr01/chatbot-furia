@@ -146,10 +146,10 @@ Boa torcida, Pantera! 🐾💜`);
         await client.sendMessage(msg.from, '*🧠 Kaike "KSCERATO" Cerato – Rifler e Lurker*\n\nKSCERATO é reconhecido por sua consistência e habilidade em situações de alta pressão. Ele desempenha o papel de lurker, explorando flancos e criando oportunidades para a equipe!');
 
         await delay(2000);
-        await client.sendMessage(msg.from, '*Yuri "yuurih" Santos – Rifler de Suporte*\n\nYuurih é um jogador versátil que atua como rifler de suporte, contribuindo para a execução das estratégias da equipe e oferecendo cobertura essencial durante os confrontos!');
+        await client.sendMessage(msg.from, '*🔥 Yuri "yuurih" Santos – Rifler de Suporte*\n\nYuurih é um jogador versátil que atua como rifler de suporte, contribuindo para a execução das estratégias da equipe e oferecendo cobertura essencial durante os confrontos!');
 
         await delay(2000);
-        await client.sendMessage(msg.from, '*Felipe "skullz" Medeiros – Âncora e Rifler*\n\nSkullz é responsável por segurar bombsites como âncora, demonstrando solidez defensiva e contribuindo com eliminações cruciais. Sua presença proporciona estabilidade à equipe!');
+        await client.sendMessage(msg.from, '*💣 Felipe "skullz" Medeiros – Âncora e Rifler*\n\nSkullz é responsável por segurar bombsites como âncora, demonstrando solidez defensiva e contribuindo com eliminações cruciais. Sua presença proporciona estabilidade à equipe!');
 
         await delay(2000);
         await client.sendMessage(msg.from, '*⚡ Marcelo "chelo" Cespedes – Entry Fragger*\n\nChelo atua como entry fragger, sendo o primeiro a entrar nos bombsites e iniciando os confrontos. Sua agressividade e rapidez são fundamentais para abrir espaço para a equipe!');
