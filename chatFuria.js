@@ -32,7 +32,7 @@ client.on('message', async msg => {
         await chat.sendStateTyping(); // Digitação Simulada
         await delay(500); //Delay de 500 milisegundos mais conhecido como meio segundo
     
-        const mensagem = `🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Quem são os Joradores CS FÚRIA\n📱 4 - Nosso Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*`;
+        const mensagem = `🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Joradores CS FÚRIA\n📱 4 - Nosso Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*`;
     
         await client.sendMessage(msg.from, mensagem);
     }
@@ -90,7 +90,7 @@ client.on('message', async msg => {
         const contact = await msg.getContact();
         const name = contact.pushname;
 
-        const mensagem = 'Olá '+ name.split(" ")[0] +' do time Furioso! 🐾\nSou o assistente virtual da FURIA! Como posso te ajudar hoje?\n\nEscolha uma das opções:\n\n🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Quem são os Joradores CS FÚRIA\n📱 4 - Nosso Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*'
+        const mensagem = 'Olá '+ name.split(" ")[0] +' do time Furioso! 🐾\nSou o assistente virtual da FURIA! Como posso te ajudar hoje?\n\nEscolha uma das opções:\n\n🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Joradores CS FÚRIA\n📱 4 - Nosso Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*'
 
         await client.sendMessage(msg.from, mensagem);
 
