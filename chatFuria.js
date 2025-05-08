@@ -116,8 +116,8 @@ client.on('message', async msg => {
         await delay(1000);
 
         await client.sendMessage(msg.from, `📅 *PRÓXIMOS JOGOS DA FURIA:*\n
-🔥 05/05 - FURIA vs Liquid (CS2 - ESL Pro League) - *19h30*
-⚽ 07/05 - FURIA FC vs Ultimate Stars (Kings League) - *21h00*
+🔥 10/05 - FURIA vs The MongolZ (CS2 - ESL Pro League) - *19h30*
+⚽ 19/05 - FURIA vs The MongolZ (CS2- ESL Pro League) - *21h00*
 🎮 09/05 - FURIA x Cloud9 (VALORANT Showmatch) - *18h00*\n\n
 ⚠️ *Os horários estão sujeitos a mudanças!* Fica de olho no nosso Insta: @furiagg`);
 
@@ -244,7 +244,7 @@ client.on('message', async msg => {
     const delayMsg = 130000
     while(msg.body !== null) {
         await delay(delayMsg);
-        adicaoJogo2()
+        adicaoJogo3()
         break
     }
     
