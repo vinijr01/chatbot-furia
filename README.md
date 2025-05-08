@@ -20,7 +20,7 @@ O bot foi desenvolvido em **Node.js** usando a biblioteca `whatsapp-web.js`, e p
 |-------|----------------|
 | 1     | Informações sobre como funciona o projeto |
 | 2     | Agenda dos próximos jogos da FURIA |
-| 3     | Curiosidades e frases inspiradoras do universo gamer |
+| 3     | Curiosidade dos Jogadores Counter-Strike 2 (CS2)|
 | 4     | Contato da equipe oficial |
 | 5     | Envio de wallpapers personalizados para celular ou computador |
 
