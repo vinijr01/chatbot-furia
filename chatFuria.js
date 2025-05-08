@@ -53,13 +53,13 @@ client.on('message', async msg => {
     async function adicaoJogo1() {
         const chat = await msg.getChat();
 
-        await client.sendMessage(msg.from, '🔔 Lembrete: *FURIA vs Liquid (CS2 - ESL Pro League)* é o próximo jogo!\n\n 📅 05/05/2025 19h30');
+        await client.sendMessage(msg.from, '🔔 Lembrete: *FURIA vs The MongolZ (CS2 - ESL Pro League) - *19h30** é o próximo jogo!\n\n 📅 10/05/2025 19h30');
     }
 
     async function adicaoJogo2() {
         const chat = await msg.getChat();
 
-        await client.sendMessage(msg.from, '🔔 Lembrete: *FURIA FC vs Ultimate Stars (Kings League)* está próximo!\n\n 📅 07/05/2025 21h00');
+        await client.sendMessage(msg.from, '🔔 Lembrete: *FURIA vs The MongolZ (CS2- ESL Pro League) - *21h00** está próximo!\n\n 📅 19/05/2025 21h00');
     }
 
     async function adicaoJogo3() {
@@ -90,7 +90,7 @@ client.on('message', async msg => {
         const contact = await msg.getContact();
         const name = contact.pushname;
 
-        const mensagem = 'Olá '+ name.split(" ")[0] +' do time Furioso! 🐾\nSou o assistente virtual da FURIA! Como posso te ajudar hoje?\n\nEscolha uma das opções:\n\n🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Curiosidades FÚRIA\n📱 4 - Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*'
+        const mensagem = 'Olá '+ name.split(" ")[0] +' do time Furioso! 🐾\nSou o assistente virtual da FURIA! Como posso te ajudar hoje?\n\nEscolha uma das opções:\n\n🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Quem são os Joradores CS FÚRIA\n📱 4 - Nosso Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*'
 
         await client.sendMessage(msg.from, mensagem);
 
@@ -121,6 +121,12 @@ client.on('message', async msg => {
 🎮 09/05 - FURIA x Cloud9 (VALORANT Showmatch) - *18h00*\n\n
 ⚠️ *Os horários estão sujeitos a mudanças!* Fica de olho no nosso Insta: @furiagg`);
 
+        await client.sendMessage(msg.from, `📺 *ONDE ASSISTIR:*
+🎙️ Transmissão com o Gaules: https://www.twitch.tv/gaules
+📡 Canal oficial da FURIA: https://www.twitch.tv/furiagg
+📷 Acompanhe também no Instagram: https://www.instagram.com/furiagg\n\n
+Boa torcida, Pantera! 🐾💜`);
+
         await delay(3000);
         await client.sendMessage(msg.from, "Quer ver mais? Digite uma das opções abaixo. 👊");
         enviarSaudacao();
@@ -131,10 +137,27 @@ client.on('message', async msg => {
         await chat.sendStateTyping();
         await delay(1000);
 
-        await client.sendMessage(msg.from, '🐾 *CURIOSIDADE FURIOSA:*\n\nVocê sabia que o nome *FURIA* representa a *intensidade* e o *espírito de luta* dos jogadores?\n\nA organização foi criada em 2017 e já colocou o Brasil no topo do CS:GO mundial! 🌍💣');
+        await client.sendMessage(msg.from, '🐾 *CURIOSIDADE FURIOSA:*\n\nVocê sabia que a equipe de Counter-Strike 2 (CS2) da FURIA é composta por cinco jogadores brasileiros experientes, cada um com funções e estilos de jogo diferenciados? 💣');
+        
+        await delay(2000);
+        await client.sendMessage(msg.from, '*🎯 Gabriel "FalleN" Toledo – Capitão e AWP*\n\nFalleN é o líder da equipe, conhecido por sua habilidade com a AWP e por sua vasta experiência no cenário competitivo. Ele traz liderança estratégica e é responsável por coordenar as táticas durante as partidas!');
+
+        await delay(2000);
+        await client.sendMessage(msg.from, '*🧠 Kaike "KSCERATO" Cerato – Rifler e Lurker*\n\nKSCERATO é reconhecido por sua consistência e habilidade em situações de alta pressão. Ele desempenha o papel de lurker, explorando flancos e criando oportunidades para a equipe!');
+
+        await delay(2000);
+        await client.sendMessage(msg.from, '*Yuri "yuurih" Santos – Rifler de Suporte*\n\nYuurih é um jogador versátil que atua como rifler de suporte, contribuindo para a execução das estratégias da equipe e oferecendo cobertura essencial durante os confrontos!');
+
+        await delay(2000);
+        await client.sendMessage(msg.from, '*Felipe "skullz" Medeiros – Âncora e Rifler*\n\nSkullz é responsável por segurar bombsites como âncora, demonstrando solidez defensiva e contribuindo com eliminações cruciais. Sua presença proporciona estabilidade à equipe!');
+
+        await delay(2000);
+        await client.sendMessage(msg.from, '*⚡ Marcelo "chelo" Cespedes – Entry Fragger*\n\nChelo atua como entry fragger, sendo o primeiro a entrar nos bombsites e iniciando os confrontos. Sua agressividade e rapidez são fundamentais para abrir espaço para a equipe!');
+
+        // await client.sendMessage(msg.from, '🐾 *CURIOSIDADE FURIOSA:*\n\nVocê sabia que o nome *FURIA* representa a *intensidade* e o *espírito de luta* dos jogadores?\n\nA organização foi criada em 2017 e já colocou o Brasil no topo do CS:GO mundial! 🌍💣');
 
         await delay(3000);
-        await client.sendMessage(msg.from, "Curtiu? Digite uma das opções abaixo. 🤯");
+        await client.sendMessage(msg.from, "Timaço né? Digite uma das opções abaixo. 🤯");
         enviarSaudacao();
     }
 
@@ -244,7 +267,7 @@ client.on('message', async msg => {
     const delayMsg = 130000
     while(msg.body !== null) {
         await delay(delayMsg);
-        adicaoJogo3()
+        adicaoJogo1()
         break
     }
     
