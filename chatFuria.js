@@ -32,7 +32,7 @@ client.on('message', async msg => {
         await chat.sendStateTyping(); // Digitação Simulada
         await delay(500); //Delay de 500 milisegundos mais conhecido como meio segundo
     
-        const mensagem = `🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Curiosidades FÚRIA\n📱 4 - Contato\n🙋 5 -  *Fan Art FURIA + Wallpapers Personalizados*`;
+        const mensagem = `🗯️ 1 - Como funciona\n🎮 2 - Próximos jogos\n💡 3 - Quem são os Joradores CS FÚRIA\n📱 4 - Nosso Contato\n🙋 5 - *Fan Art FURIA + Wallpapers Personalizados*`;
     
         await client.sendMessage(msg.from, mensagem);
     }
