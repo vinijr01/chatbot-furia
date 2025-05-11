@@ -266,7 +266,7 @@ Boa torcida, Pantera! 🐾💜`);
     const delayMsg = 130000
     while(msg.body !== null) {
         await delay(delayMsg);
-        adicaoJogo1()
+        adicaoJogo2()
         break
     }
     
